@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="profile">
+            <img src="images/carre.png" alt="profile photo"> 
+            <h1>Youssef Rebai</h1>
+        </div>
+        <ul>
+            <a href="Contact.html"><li>Contact</li></a>
+            <a href="project.html"><li>Mes Projets</li></a>
+            <a href="home.html"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            
+        </ul>
+    </nav>
+    <section class="page-content">
+    <header>
+          <h1>  HEY, JE SUIS UN EXPERT EN BLENDER 3D.
+        </h1>
+        <P> je modelise de smodeles 3d sur commande des plans d'architectes des videos animées des scenes et des caractères 3d pour des jeux ...</P>
+    
+        <button id="myButton">dites hey!</button>
+    </header>
+    <section class="presentation-image">
+        <img class="img" src="images/ai-image.png " alt="ai image">
+    </section>
+    <footer>
+        <div class="colonne">
+          <h3>Mes service</h3>
+          <p>modélisation et animation 3D perso</p>
+          <p>visualisation et rendus professionels</p>
+          <p>formation et accompagnement créatif</p>
+        </div>
+       
+        <div class="colonne" id="colone-contact">
+          <h3>Contact</h3>
+          <div><img src="images/discord.png" alt=""><p>discord:</p><a href="https://discord.com/users/chib3ou">Chib3ou</a></div>
+          <div><img src="images/facebook.png" alt=""><p>Facebook:</p><a href="https://www.facebook.com/profile.php?id=61565189760636&mibextid=ZbWKwL">Youssef Rebai</a></div>
+          <div><img src="images/insta.png" alt=""><p>Instagram:</p><a href="https://www.instagram.com/chib3ou/">Chib3ou</a></div>
+          <div><img src="images/mail.png" alt=""><p>Mail:</p><a href="mailto:rebaiyoussef9999@gmail.com">rebaiyoussef9999@gmail.com</a></div>
+  
+  
+        </div>
+  
+      </footer>
+      <script>
+        // Sélectionner le bouton par son id
+        const button = document.getElementById('myButton');
+        
+        // Ajouter un événement au clic sur le bouton
+        button.addEventListener('click', function() {
+            // Utiliser prompt() pour afficher un champ de saisie
+            const userInput = prompt("dites Hey!:");
+
+            if (userInput !== null) { // Si l'utilisateur n'annule pas
+                alert("Vous avez écrit : " + userInput);
+            }
+        });
+    </script>
+    </html>

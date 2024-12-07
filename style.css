@@ -17,6 +17,14 @@ footer .colonne{
     text-align: center;
        
 }
+ul a{
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+ul a:hover{
+    color: gray;
+}
 .colonne div a{
     color: aliceblue;
     float: left;
@@ -198,7 +206,7 @@ video{
     width: 100%; /* Fait occuper 100% de la largeur de son conteneur */
     height: auto; /* Maintient les proportions */
 }
-.page-content .project-section {
+.project-section {
     margin-top: 6%;
 
 }
