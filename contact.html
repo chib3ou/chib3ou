@@ -27,12 +27,23 @@
             
         </ul>
     </nav>
-    <div class="colonne">
-        <h3>A propos</h3>
-        <p>Je suis un artiste 3D passionné, débutant mais curieux, qui explore le monde de la modélisation, de l'animation et du rendu.
-        Je travaille principalement avec Blender et j'aime transformer des idées en modèles 3D uniques et immersifs.
-      Mon objectif est de progresser chaque jour et de partager mes créations avec le monde tout en apprenant de nouvelles techniques.</p>
-      </div>
+    <section id="contact">
+      <h2>Contactez-moi</h2>
+      <form id="contactForm">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom">
+  
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" placeholder="Votre email">
+  
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" placeholder="Votre message"></textarea>
+  
+          <button type="submit">Envoyer</button>
+      </form>
+      <p id="formMessage" style="color: red; display: none;">Veuillez remplir tous les champs correctement.</p>
+  </section>
+  
     <footer>
         <div class="colonne">
           <h3>Mes service</h3>
@@ -52,4 +63,47 @@
         </div>
   
       </footer>
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire si les validations échouent
+
+    // Récupération des champs
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Validation des champs
+    if (name === "" || email === "" || message === "") {
+        showMessage("Veuillez remplir tous les champs.");
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        showMessage("Veuillez entrer un email valide.");
+        return;
+    }
+
+    // Si toutes les validations passent
+    alert("Message envoyé avec succès !");
+    document.getElementById('contactForm').reset();
+});
+
+// Fonction pour valider l'email
+function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+// Fonction pour afficher un message d'erreur
+function showMessage(message) {
+    const formMessage = document.getElementById('formMessage');
+    formMessage.textContent = message;
+    formMessage.style.display = 'block';
+
+    setTimeout(() => {
+        formMessage.style.display = 'none';
+    }, 3000); // Le message disparaît après 3 secondes
+}
+
+      </script>
     </html>
