@@ -1,8 +1,9 @@
 
 footer{
     margin-top: 20px;
-    margin-left: 0%;
-    margin-right: 0%;
+    margin-left: -7%;
+    margin-right: -7%;
+    margin-bottom: -7%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -11,6 +12,8 @@ footer{
     color: rgb(72, 112, 112);
     font-family: 'Oswald';
     padding: 10px;
+    
+
 }
 footer .colonne{
     width: 28%;
@@ -95,7 +98,33 @@ footer img{
 body{
     padding: 0 2%;
     margin: 0;
+    display: flex;
+    min-height: 70vw;
+    flex-direction: column;
+    
 }
+#backToTop {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+}
+
 nav{
     display: flex;
     flex-direction: row;
@@ -106,6 +135,92 @@ nav{
     position: sticky;
     top: 0;
 }
+nav.dark-mode{
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        position: sticky;
+        top: 0;
+    }
+
+#about{
+    flex: 1;
+}
+
+
+/* Conteneur du switch */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Cacher l'input checkbox */
+#darkModeToggle {
+    display: none;
+}
+
+/* Apparence du bouton switch */
+.toggle-switch {
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Le cercle à l'intérieur */
+.toggle-switch::after {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s, background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icône de lune */
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #000;
+}
+
+/* État activé (mode sombre) */
+#darkModeToggle:checked + .toggle-switch {
+    background-color: #333;
+}
+
+#darkModeToggle:checked + .toggle-switch::after {
+    left: 32px;
+    background-color: #fff;
+}
+
+#darkModeToggle:checked + .toggle-switch .icon {
+    color: #fff;
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+
 nav .profile{
     display: flex;
     align-items: center;
@@ -250,7 +365,7 @@ video{
     color: grey;
 
 }
-.page-content .project-section .projects .project:hover {
+.page-content .project-section .projects a:hover {
     transform: scale(1.05);
 }
 .page-content .project-section .dates{
@@ -385,7 +500,7 @@ video{
 
 .about-content h2 {
     font-size: 2em;
-    color: #333;
+    color: #201c1c;
     margin-bottom: 10px;
 }
 

@@ -19,7 +19,14 @@
             <img src="images/carre.png" alt="profile photo"> 
             <h1>Youssef Rebai</h1>
         </div>
-        <ul>
+        
+    <div class="toggle-container">
+        <input type="checkbox" id="darkModeToggle">
+        <label for="darkModeToggle" class="toggle-switch">
+            <span class="icon">🌙</span>
+        </label>
+    </div>
+    <ul>
             <a href="contact.html"><li>Contact</li></a>
             <a href="project.html"><li>Mes Projets</li></a>
             <a href="index.html"><li>Home</li></a>
@@ -38,6 +45,9 @@
     <section class="presentation-image">
         <img class="img" src="images/ai-image.png " alt="ai image">
     </section>
+    <!-- Bouton "Retour en haut" -->
+<button id="backToTop" title="Retour en haut">⇧</button>
+
     <footer>
         <div class="colonne">
           <h3>Mes service</h3>
@@ -57,18 +67,5 @@
         </div>
   
       </footer>
-      <script>
-        // Sélectionner le bouton par son id
-        const button = document.getElementById('myButton');
-        
-        // Ajouter un événement au clic sur le bouton
-        button.addEventListener('click', function() {
-            // Utiliser prompt() pour afficher un champ de saisie
-            const userInput = prompt("dites Hey!:");
-
-            if (userInput !== null) { // Si l'utilisateur n'annule pas
-                alert("Vous avez écrit : " + userInput);
-            }
-        });
-    </script>
+      <script src="script.js"></script>
     </html>

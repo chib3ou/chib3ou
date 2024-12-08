@@ -43,7 +43,9 @@
       </form>
       <p id="formMessage" style="color: red; display: none;">Veuillez remplir tous les champs correctement.</p>
   </section>
-  
+  <!-- Bouton "Retour en haut" -->
+<button id="backToTop" title="Retour en haut">↑</button>
+
     <footer>
         <div class="colonne">
           <h3>Mes service</h3>
@@ -63,47 +65,5 @@
         </div>
   
       </footer>
-      <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche l'envoi du formulaire si les validations échouent
-
-    // Récupération des champs
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    // Validation des champs
-    if (name === "" || email === "" || message === "") {
-        showMessage("Veuillez remplir tous les champs.");
-        return;
-    }
-
-    if (!validateEmail(email)) {
-        showMessage("Veuillez entrer un email valide.");
-        return;
-    }
-
-    // Si toutes les validations passent
-    alert("Message envoyé avec succès !");
-    document.getElementById('contactForm').reset();
-});
-
-// Fonction pour valider l'email
-function validateEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-}
-
-// Fonction pour afficher un message d'erreur
-function showMessage(message) {
-    const formMessage = document.getElementById('formMessage');
-    formMessage.textContent = message;
-    formMessage.style.display = 'block';
-
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-    }, 3000); // Le message disparaît après 3 secondes
-}
-
-      </script>
+      <script src="script.js"></script>
     </html>
